@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/alpers/Desktop/myFirst/android/app/build/intermediates/res/merged/debug/mipmap-hdpi/ic_launcher.png",
+        "source": "/Users/alpers/Desktop/myFirst/android/app/src/main/res/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "/Users/alpers/Desktop/myFirst/creative-blog/android/app/build/intermediates/res/merged/debug/mipmap-hdpi/ic_launcher.png",
+        "source": "/Users/alpers/Desktop/myFirst/creative-blog/android/app/src/main/res/mipmap-hdpi/ic_launcher.png"
+    }
+]
