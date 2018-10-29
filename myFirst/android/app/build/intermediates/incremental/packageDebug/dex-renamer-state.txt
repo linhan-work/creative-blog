@@ -1,4 +1,4 @@
-#Sun Oct 28 00:26:02 CST 2018
-base.0=/Users/alpers/Desktop/myFirst/android/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main
+#Sun Oct 28 18:59:19 CST 2018
+base.0=/Users/alpers/Desktop/creative-blog/myFirst/android/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main
 renamed.0=classes.dex
-file.0=/Users/alpers/Desktop/myFirst/android/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex
+file.0=/Users/alpers/Desktop/creative-blog/myFirst/android/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex

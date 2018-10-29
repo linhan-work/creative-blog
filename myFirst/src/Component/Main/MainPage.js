@@ -5,9 +5,9 @@ import {
     View,
     Image,
     StyleSheet,
-         
+    TouchableOpacity     
 } from "react-native";
-
+import Login from "../Other/LoginScreen";
 
 export default class MainPage extends Component {
     constructor(props) {
@@ -38,7 +38,10 @@ export default class MainPage extends Component {
                         ref="keyWordsInput"
                         onSubmitEditing={() => {this.refs.keyWordsInput.blur()}}
                     ></TextInput>
-                    <Image style={styles.img} source={require('../../imgs/search.png')}></Image>
+                    <TouchableOpacity
+                    onPress={() => this.props.navigation.navigate('Login')}
+                    ><Image style={styles.img} source={require('../../imgs/search.png')}></Image></TouchableOpacity>
+                    
                 </View>   
             </View>
 
@@ -59,6 +62,15 @@ export default class MainPage extends Component {
             
         } else {
             this.setState({inputValue: ''});
+        }
+    }
+    _onPress() {
+        const { navigator } = this.props;
+        if(navigator) {
+            navigator.push({
+                name:'Login',
+                Component: Login
+            })
         }
     }
 };

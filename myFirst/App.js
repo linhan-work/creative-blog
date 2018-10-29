@@ -3,6 +3,7 @@ import { Text } from 'react-native';
 import { StackNavigator } from "react-navigation";
 import Home from "./src/Component/RootTab";
 import Login from "./src/Component/Other/LoginScreen";
+const loginName = ""
 const App = StackNavigator({
         Main : {
             screen: Home,
@@ -13,12 +14,13 @@ const App = StackNavigator({
         Login: {
             screen: Login,
             navigationOptions: ({ navigation }) => ({
-                header: '登录'
+                header: null,
+                title: '登录'
             })
         }
     },
     {
-        initialRouteName: 'Main'
+        initialRouteName: 'Login'
     });
 
 export default App;

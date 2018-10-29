@@ -3,18 +3,20 @@ import {
     StyleSheet,
     View,
     Text,
-    TextInput
+    TextInput,
+    ScrollView
  } from "react-native";
 
  export default class EditView extends React.Component{
     constructor(props) {
         super(props);
-        this.setState({
+        this.state = {
             text: ''
-        })
+        }
     }
     render() {
         return(
+            <ScrollView keyboardDismissMode='on-drag' >
             <View style={styles.TextInputView}>
                 <TextInput style={styles.TextInput}
                 placeholder={this.props.name}
@@ -22,9 +24,13 @@ import {
                     this.setState({text});
                     this.props.onChangeText(text);
                 }} 
+                secureTextEntry={this.props.type}//隐藏输入内容
+                underlineColorAndroid = 'transparent'
+                placeholderTextColor= '#666'
                 ></TextInput>
-             </View>
-         );
+            </View>
+            </ScrollView>
+        );
      }
  }
 
@@ -32,15 +38,13 @@ import {
     TextInputView: {
         justifyContent: 'center',
         flexDirection: 'column',
-        backgroundColor: '#fff',
-        borderColor: 'blue',
-        marginTop: 10,
-        height: 40,
-        borderRadius: 5
+        borderColor: '#fff',
+        borderBottomWidth: 0.5,
+        height: 46,
     },
     TextInput: {
-        height: 35,
-        margin: 5,
-        backgroundColor: '#fff'
+        paddingLeft: 0,
+        paddingBottom: 5,
+        color: '#fff'
     }
  });
