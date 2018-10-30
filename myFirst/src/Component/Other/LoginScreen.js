@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { 
     StyleSheet,
     View,
+    Text,
     Dimensions,
     ImageBackground
  } from "react-native";
@@ -25,14 +26,13 @@ export default class LoginScreen extends React.Component {
             <ImageBackground style={styles.imageBg}
             source={require('../../imgs/login_bg.jpg')}>
                 <View style={styles.container}>
-                    {/* <EditView name='用户名/手机号/邮箱' onChangeText={() => {(text) => {this.setState({
+                    <EditView name='用户名/手机号/邮箱' onChangeText={() => {(text) => {this.setState({
                         username: text
                     })}}} />
                     <EditView name='password' type={true} onChangeText={(text) => {this.setState({
                         password: text
-                    })}} /> */}
-                    <ButtonView title='登录' type='loginBtn'></ButtonView>
-                    <ButtonView title='忘记密码' type='forgetBtn'></ButtonView>
+                    })}} />
+                    <ButtonView btnName='登录' style={styles.loginBtn}></ButtonView>
                 </View>
             </ImageBackground>
         );
@@ -54,5 +54,10 @@ const styles = StyleSheet.create({
         marginTop: '75%',
         paddingLeft: '20%',
         paddingRight: '20%'
+    },
+    loginBtn: {
+        width: '100%',
+        marginTop: 20,
+        height: 46
     }
 });

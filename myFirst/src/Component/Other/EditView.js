@@ -26,6 +26,7 @@ import {
                 secureTextEntry={this.props.type}//隐藏输入内容
                 underlineColorAndroid = 'transparent'
                 placeholderTextColor= '#666'
+                selectionColor='#fff'
                 ></TextInput>
             </View>
         );
@@ -42,7 +43,7 @@ import {
     },
     TextInput: {
         paddingLeft: 0,
-        paddingBottom: 5,
+        paddingBottom: 0,
         color: '#fff'
     }
  });
