@@ -14,13 +14,12 @@ import {
             text: ''
         }
     }
+
     render() {
         return(
-            <ScrollView keyboardDismissMode='on-drag' >
             <View style={styles.TextInputView}>
                 <TextInput style={styles.TextInput}
-                placeholder={this.props.name}
-                onChangeText={(text) => {
+                placeholder={this.props.name} onChangeText={(text) => {
                     this.setState({text});
                     this.props.onChangeText(text);
                 }} 
@@ -29,7 +28,6 @@ import {
                 placeholderTextColor= '#666'
                 ></TextInput>
             </View>
-            </ScrollView>
         );
      }
  }
