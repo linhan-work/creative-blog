@@ -3,7 +3,8 @@ import {
     View,
     Text,
     Image,
-    TouchableOpacity
+    TouchableOpacity,
+    StyleSheet
  } from "react-native";
 
 
@@ -16,20 +17,71 @@ export default class extends React.Component{
     }
     render() {
         return (
-            <View>
-                <Image source={require('../../imgs/home_sel.png')}></Image>
-                <Text>哈哈哈</Text>
-                <View>
-                    <Text>text的解放军将是;大姐夫;近代史;富家大室;九分裤;鲁大师减肥;对数据;发件的司法鉴定所了;荆防颗粒;对数据富家大室;减肥法近段时间辅导老师</Text>
+            <View style={styles.container}>
+                <View style={styles.main}>
+                    <View style={styles.iconView}>
+                        <Image source={require('../../imgs/home_sel.png')} style={styles.icon}></Image>
+                    <Text>哈哈哈</Text>
+                    <Text>哈哈哈</Text>
+                    </View>
+                    <View>
+                        <Text style={styles.conTxt}>text的解放军将是;大姐夫;近代史;富家大室;九分裤;鲁大师减肥;对数据;发件的司法鉴定所了;荆防颗粒;对数据富家大室;减肥法近段时间辅导老师</Text>
+                    </View>
                 </View>
-                <View>
-                    <TouchableOpacity>
-                        <Image source={require('../../imgs/home_sel.png')}></Image>
-                        <Image source={require('../../imgs/home_sel.png')}></Image>
-                        <Image source={require('../../imgs/home_sel.png')}></Image>
+                <View style={styles.iconView}>
+                    <TouchableOpacity  style={styles.bottOp}>
+                        <Image source={require('../../imgs/home_sel.png')} style={styles.bott}></Image>
+                    </TouchableOpacity>
+                    <TouchableOpacity  style={styles.bottOp}>
+                        <Image source={require('../../imgs/home_sel.png')} style={styles.bott}></Image>
+                    </TouchableOpacity>
+                    <TouchableOpacity  style={styles.bottOp}>
+                        <Image source={require('../../imgs/home_sel.png')} style={styles.bott}></Image>
                     </TouchableOpacity>
                 </View>
             </View>
         );
     }
 }
+
+const styles = StyleSheet.create({
+    container: {
+        marginTop: '5%',
+        paddingTop: 10,
+        paddingBottom: 10
+    },
+    main:{
+        backgroundColor: '#fff',
+        paddingRight: 15,
+        paddingLeft: 15,
+    },
+    iconView: {
+        flexDirection: 'row',
+        backgroundColor: '#fff',
+
+    },
+    icon: {
+        borderRadius: 100,
+        width: 40,
+        height: 40,
+        // overlayColor: 'blue'
+    },
+    bottOp: {
+        flex: 1,
+        height: 40,
+        alignItems: 'center',
+        justifyContent: 'center'
+    },
+    bott: {
+        width: 20,
+        height: 20
+    },
+    conTxt: {
+        lineHeight: 20,
+        fontSize: 16,
+        letterSpacing: 1,
+        borderBottomWidth: 0.5,
+        borderBottomColor: '#FFFAF0',
+        paddingBottom: 30
+    }
+});

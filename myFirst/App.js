@@ -20,7 +20,7 @@ const App = StackNavigator({
         }
     },
     {
-        initialRouteName: 'Login'
+        initialRouteName: 'Main'
     });
 
 export default App;

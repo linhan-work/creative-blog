@@ -32,7 +32,7 @@ export default class LoginScreen extends React.Component {
                     <EditView name='password' type={true} onChangeText={(text) => {this.setState({
                         password: text
                     })}} />
-                    <ButtonView btnName='登录' style={styles.loginBtn}></ButtonView>
+                    <ButtonView btnName='登录' style={styles.loginBtn} ></ButtonView>
                 </View>
             </ImageBackground>
         );
@@ -43,6 +43,9 @@ export default class LoginScreen extends React.Component {
                 user: text
             });
         }
+    }
+    _loginCheck() {
+        
     }
 }
 const styles = StyleSheet.create({

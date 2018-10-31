@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { 
-    Text,
     TextInput,
     View,
     Image,
@@ -8,6 +7,7 @@ import {
     TouchableOpacity     
 } from "react-native";
 import Login from "../Other/LoginScreen";
+import Card from "./Card";
 
 export default class MainPage extends Component {
     constructor(props) {
@@ -43,6 +43,7 @@ export default class MainPage extends Component {
                     ><Image style={styles.img} source={require('../../imgs/search.png')}></Image></TouchableOpacity>
                     
                 </View>   
+                <Card></Card>
             </View>
 
         );
@@ -77,8 +78,6 @@ export default class MainPage extends Component {
 
 const styles = StyleSheet.create({
     container: {
-        paddingRight: 15,
-        paddingLeft: 15,
         marginTop: 10
     },
     search: {
