@@ -21,12 +21,15 @@ export default class extends React.Component{
                 <View style={styles.main}>
                     <View style={styles.iconView}>
                         <Image source={require('../../imgs/home_sel.png')} style={styles.icon}></Image>
-                    <Text>哈哈哈</Text>
-                    <Text>哈哈哈</Text>
+                            <View style={styles.nicktime}>
+                                <Text>昵称</Text>
+                                <Text>2018-10-31</Text>
+                            </View>
                     </View>
-                    <View>
+                    <View style={styles.conView}>
                         <Text style={styles.conTxt}>text的解放军将是;大姐夫;近代史;富家大室;九分裤;鲁大师减肥;对数据;发件的司法鉴定所了;荆防颗粒;对数据富家大室;减肥法近段时间辅导老师</Text>
                     </View>
+                    
                 </View>
                 <View style={styles.iconView}>
                     <TouchableOpacity  style={styles.bottOp}>
@@ -54,6 +57,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#fff',
         paddingRight: 15,
         paddingLeft: 15,
+        paddingTop: 15
     },
     iconView: {
         flexDirection: 'row',
@@ -64,7 +68,7 @@ const styles = StyleSheet.create({
         borderRadius: 100,
         width: 40,
         height: 40,
-        // overlayColor: 'blue'
+        overlayColor: 'blue'
     },
     bottOp: {
         flex: 1,
@@ -77,11 +81,17 @@ const styles = StyleSheet.create({
         height: 20
     },
     conTxt: {
-        lineHeight: 20,
+        lineHeight: 22,
         fontSize: 16,
         letterSpacing: 1,
         borderBottomWidth: 0.5,
         borderBottomColor: '#FFFAF0',
         paddingBottom: 30
+    },
+    nicktime: {
+        paddingLeft: 20
+    },
+    conView: {
+        paddingTop: 15
     }
 });
