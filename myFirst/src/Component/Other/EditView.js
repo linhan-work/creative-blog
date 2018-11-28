@@ -4,7 +4,8 @@ import {
     View,
     Text,
     TextInput,
-    ScrollView
+    ScrollView,
+    KeyboardAvoidingView
  } from "react-native";
 
  export default class EditView extends React.Component{
@@ -17,18 +18,21 @@ import {
 
     render() {
         return(
-            <View style={styles.TextInputView}>
-                <TextInput style={styles.TextInput}
-                placeholder={this.props.name} onChangeText={(text) => {
-                    this.setState({text});
-                    this.props.onChangeText(text);
-                }} 
-                secureTextEntry={this.props.type}//隐藏输入内容
-                underlineColorAndroid = 'transparent'
-                placeholderTextColor= '#666'
-                selectionColor='#fff'
-                ></TextInput>
-            </View>
+            // <KeyboardAvoidingView behavior='padding'>
+                <View style={styles.TextInputView}>
+                    <TextInput style={styles.TextInput}
+                    placeholder={this.props.name} 
+                    onChangeText={(text) => {
+                        this.setState({text});
+                        this.props.onChangeText(text);
+                    }} 
+                    secureTextEntry={this.props.type}//隐藏输入内容
+                    underlineColorAndroid = 'transparent'
+                    placeholderTextColor= '#666'
+                    selectionColor='#fff'
+                    ></TextInput>
+                </View>
+            // </KeyboardAvoidingView>
         );
      }
  }

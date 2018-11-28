@@ -16,7 +16,7 @@ export default class ButtonView extends React.Component{
     render() {
         return (
             <View>
-                <TouchableOpacity style={[styles.btnDefault,this.props.style]}>
+                <TouchableOpacity style={[styles.btnDefault,this.props.style]} onPress={this.props.onPressCallback}>
                     <Text style={styles.txtDefault}>{this.props.btnName}</Text>
                 </TouchableOpacity>
             </View>

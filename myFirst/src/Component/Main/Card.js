@@ -27,7 +27,7 @@ export default class extends React.Component{
                             </View>
                     </View>
                     <View style={styles.conView}>
-                        <Text style={styles.conTxt}>text的解放军将是;大姐夫;近代史;富家大室;九分裤;鲁大师减肥;对数据;发件的司法鉴定所了;荆防颗粒;对数据富家大室;减肥法近段时间辅导老师</Text>
+                        <Text style={styles.conTxt}>java sccc</Text>
                     </View>
                     
                 </View>

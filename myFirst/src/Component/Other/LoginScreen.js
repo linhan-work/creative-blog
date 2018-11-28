@@ -2,12 +2,14 @@ import React, { Component } from "react";
 import { 
     StyleSheet,
     View,
+    KeyboardAvoidingView,
     Text,
     Dimensions,
     ImageBackground
  } from "react-native";
 import EditView from "../Other/EditView";
 import ButtonView from "../Other/ButtonView";
+import { Input } from 'react-native-elements';
 
  const {width, height} = Dimensions.get('window');
  const DEVWIDTH = width;
@@ -32,20 +34,34 @@ export default class LoginScreen extends React.Component {
                     <EditView name='password' type={true} onChangeText={(text) => {this.setState({
                         password: text
                     })}} />
-                    <ButtonView btnName='登录' style={styles.loginBtn} ></ButtonView>
+                    <ButtonView btnName='登录' style={styles.loginBtn} onPressCallback={this._loginCheck}></ButtonView>
                 </View>
-            </ImageBackground>
+            </ImageBackground> 
         );
     }
     _onChangeText(text) {
         if(text) {
-            this.setState({
+            console.log(text);
+            this.setState({ 
                 user: text
             });
         }
     }
     _loginCheck() {
-        
+        fetch("http://127.0.0.1:5000/index", {
+            method: 'GET',
+            headers: {
+                "Accept": "application/json",
+                "Content-Type": 'application/json'
+            }
+        }).then((response) => response.json()).then((responseData) => {
+            console.log(responseData);
+            
+        }).catch((err) => {
+            console.log(err);
+            console.log();
+            
+        })
     }
 }
 const styles = StyleSheet.create({
